@@ -1,0 +1,80 @@
+body{
+  padding-top: 50px;
+  }
+
+.navbar{
+  /*background-color: #FFF0000;*/
+  background-color: #800000;
+  }
+/*Change color to White*/
+#text{
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#background-image{
+  position: relative;
+  padding:0;
+  margin: 0;
+  overflow:hidden;
+  height:600px;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+#image-1{
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  background-image: url(../images/ecommerce2.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 200px;
+  top: 100px;
+  left: -25px ;
+  
+
+}
+
+#image-2{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  margin-left: -100px;
+  background-image: url(../images/square.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: auto;
+  top: 100px;
+  margin-top: auto;
+}
+
+#images{
+  width:auto;
+  height: 200px;
+}
+
+#footer{
+  margin-top: 50px;
+  background-color: #800000;
+  color: #FFFFFF;
+}
+
+#quantity{
+  margin-left: -16px;
+}
+
+#quantity-label{
+  margin-left: -16px;
+}
+
+/*CSS class thats change product images, so that they appear the same size in modal windows.*/
+/* img for img src and details for class="img-responsive center-block" in the HTML*/
+img.details{
+  width:auto;
+  margin: 15px auto;
+  height: 200px;
+}
