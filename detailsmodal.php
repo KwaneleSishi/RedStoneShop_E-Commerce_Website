@@ -13,8 +13,9 @@ $brand = mysqli_fetch_assoc($brand_query);
 $sizestring = $product['sizes'];
 $sizestring = rtrim($sizestring, ',');
 $size_array = explode(',', $sizestring);
-
 ?>
+<!-- Details Light Box -->
+<?php ob_start(); ?>
 
 <div class="modal fade details-1" id="details-1" tabindex="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">
  <div class="modal-dialog modal-lg">
@@ -39,7 +40,7 @@ $size_array = explode(',', $sizestring);
                 </div>
                 <div class="col-sm-6">
                     <h4>Details</h4>
-                    <p><?=nl2br($product['description']); ?></p>
+                    <p><?= nl2br($product['description']); ?></p>
                     <hr />
                     <p>Price: R<?= $product['price']; ?></p>
                     <p>Brand: <?= $brand['brand']; ?></p>
@@ -80,3 +81,26 @@ $size_array = explode(',', $sizestring);
     </div>
   </div>
 </div>
+
+
+<!-- Script to refresh modal  every time a different product is clicked in the DB -->
+<script>
+$(function (){
+$('.fotorama').fotorama({loop: true,});
+});
+
+jQuery('#size').change(function(){
+var available = jQuery('#size option:selected').data("available");
+jQuery('#available').val(available);
+});
+
+function closemodal() {
+jQuery('#details-1').modal('hide');
+setTimeout(function(){
+    jQuery('#details-1').remove();
+    jQuery('.modal-backdrop').remove();
+    }, 500);
+}
+</script>
+
+<?php echo ob_get_clean(); ?>

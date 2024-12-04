@@ -24,90 +24,17 @@
         <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
         <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
         <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
+        <button type="button" class="btn btn-success" onclick="detailsmodal(<?=$tbl_products['id'];?>)" >Details</button>
       </div>
     <?php endwhile; ?>
-     <!--features product 2-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    <!--features product 3-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    <!--features product 4-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    <!--features product 5-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    <!--features product 6-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    <!--features product 7-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    <!--features product 8-->
-    <?php while($tbl_products = mysqli_fetch_assoc($featured)) :  ?>
-      <div class="col-md-3 text-center">
-        <h4><?= $tbl_products['title']; ?></h4>
-        <img src="<?=$tbl_products['image']; ?>" alt="<?= $tbl_products['title']; ?>" id="images" class="img-responsive center-block"/>
-        <p class="list-price text-danger"> List Price: <s>R<?= $tbl_products['list_price']; ?></s></p>
-        <p class="price">Our Price: R<?= $tbl_products['price']; ?></p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-<?= $tbl_products['id']; ?>">Details</button>
-      </div>
-    <?php endwhile; ?>
-    
 
-
-    </div>
+  </div>
 
 
 <!--details modal-->
- <?php include 'detailsmodal.php';
-
-       include 'includes/footer.php';
+ <?php include 'includes/footer.php';
  ?>
  <!-- End of details modal-->
 </body>
+
 </html>
