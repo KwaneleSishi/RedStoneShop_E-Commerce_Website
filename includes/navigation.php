@@ -32,6 +32,9 @@
         </ul>
       </li>
     <?php endwhile; ?>
+    <li>
+      <a href="cart.php" id="cartbutton"><span class="glyphicon glyphicon-shopping-cart"></span>My Cart</a>
+    </li>
     </ul>
   </div>
  </nav>
