@@ -82,6 +82,28 @@ if($cart_id != '') {
                 ?>
             </tbody>
         </table>
+        <table class="table table-bordered table-condensed text-right">
+            <legend>Total</legend>
+            <thead class="totals-table-header">
+                <th>Total Items</th>
+                <th>Sub Total</th>
+                <th>Tax</th>
+                <th>Grand Total</th>
+            </thead>
 
+            <tbody>
+                <tr>
+                    <td><?=$item_count;?></td>
+                    <td><?=money($sub_total);?></td>
+                    <td><?=money($tax);?></td>
+                    <td class="bg-success"><?=money($grand_total);?></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!--Check Out Button -->
+        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#checkoutModal">
+        <span class="glyphicon glyphicon-shopping-cart"></span> Check Out
+        </button>
     </div>
 </div>
